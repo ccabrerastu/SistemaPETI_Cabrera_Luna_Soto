@@ -1,0 +1,76 @@
+# 📘 Sistema PETI – Cabrera, Luna & Soto
+Sistema web desarrollado para la gestión del **Plan Estratégico de Tecnologías de Información (PETI)**.  
+Implementado con una arquitectura por capas, uso de Docker y manejo de generación de reportes en PDF.
+
+---
+
+## 📌 Descripción General
+El **Sistema PETI** permite registrar, consultar y gestionar todos los elementos clave del plan estratégico de TI dentro de una organización, tales como:
+
+- Misión y visión institucional  
+- Objetivos estratégicos  
+- Estrategias y metas  
+- Procesos y componentes del PETI  
+- Generación de reportes PDF mediante FPDF
+
+Este proyecto fue desarrollado como parte de una asignatura académica universitaria, aplicando buenas prácticas de separación por capas y despliegue mediante contenedores.
+
+---
+
+## 🧩 Características principales
+- Gestión completa de elementos del PETI  
+- Interfaz implementada con HTML, CSS y PHP  
+- Arquitectura por capas: *presentation*, *business*, *data*  
+- Contenedores Docker para despliegue portable  
+- Uso de Composer para dependencias PHP  
+- Generación de reportes PDF con FPDF  
+- Script SQL listo para inicializar la base de datos  
+
+---
+
+## 🛠️ Tecnologías utilizadas
+| Tipo | Tecnologías |
+|------|--------------|
+| Backend | PHP 7+ |
+| Interfaz | HTML5, CSS3 |
+| Infraestructura | Docker, Docker Compose |
+| Dependencias | Composer |
+| Reportes | Librería **FPDF** |
+| Base de Datos | MySQL (según `script.sql`) |
+
+---
+
+## 📁 Estructura del proyecto
+La rama **luna** contiene la siguiente estructura principal:
+
+-business/ → Lógica de negocio
+- data/ → Capa de acceso a datos
+- libs/fpdf/ → Librería FPDF para PDF
+- presentation/ → Vistas y formularios del sistema
+- bootstrap.php → Inicializa dependencias
+- composer.json/.lock → Gestión de paquetes PHP
+- Dockerfile → Imagen del proyecto
+- docker-compose.yml → Orquestación de contenedores
+- index.php → Entrada principal
+- script.sql → Creación y carga de la BD
+- custom.conf → Configuración personalizada 
+
+---
+
+## 🚀 Instalación y despliegue
+
+### ✔️ Requisitos previos
+- Docker & Docker Compose  
+- PHP 7.x o superior (si se instala manualmente)  
+- Servidor Apache o Nginx  
+- MySQL / MariaDB  
+
+---
+
+## 🟦 Instalación con Docker (recomendado)
+Clonar el repositorio:
+
+```bash
+git clone https://github.com/ccabrerastu/SistemaPETI_Cabrera_Luna_Soto.git
+cd SistemaPETI_Cabrera_Luna_Soto
+docker-compose up -d
